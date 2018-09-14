@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="15" defaultlocale="en-US" id="com.sinopacific.tekamogpslive" version="1.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <feature name="Camera">
+        <param name="browser-package" value="Camera" />
+    </feature>
+    <name>TekamoGPS Live</name>
+    <description>
+        TekamoGPS Live tracker
+    </description>
+    <author email="support@sinopacific.co" href="http://sinopacific.co">
+        Sinopacific Co Limited
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <splash src="splash.png" />
+    <icon src="icon.png" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="android-minSdkVersion" value="18" />
+    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="deployment-target" value="10.2" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="blacktranslucent" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
+</widget>
