@@ -207,9 +207,9 @@ var mainView = App.addView('.view-main', {
 });
 
 var AppDetails = {
-    name: 'VitalGPS-app',
-    code: 26,
-    supportCode: 3,
+    name: 'TekamoGPS-Live-app',
+    code: 8,
+    supportCode: 17,
 };
 
 window.PosMarker = {};
