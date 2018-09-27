@@ -152,9 +152,7 @@ function setupPush(){
 }
 
 function onAppPause(){ 
-    if ($hub) {
-        $hub.stop();
-    }
+    
 } 
 function onAppResume(){    
     if (localStorage.ACCOUNT && localStorage.PASSWORD) {
@@ -162,9 +160,7 @@ function onAppResume(){
         getNewData();
     }
    
-    if ($hub) {
-        $hub.start();
-    } 
+    
 }  
 
  
@@ -180,48 +176,7 @@ function backFix(event){
     } 
 }
 
-function webSockConnect(){    
-    var MinorToken = getUserinfo().MinorToken;
-    var deviceToken = !localStorage.PUSH_DEVICE_TOKEN? '111' : localStorage.PUSH_DEVICE_TOKEN;
-    $hub = hubHelper({ url :"http://api.Quikdata.co:8088/",
-                           qs: {
-                                MinorToken : MinorToken,
-                                DeviceToken : deviceToken
-                           },
-                           hub: "v1Hub"
-    },{
-        receiveMessage: function(from, msg){
-            
-        },
-        receiveNotice: function(msg){
-            
-            /*if (!inBrowser) {                
-                plus.push.clear();
-            }  */          
-            //alert('websocket msg received');
-            console.log(msg);
-            var objMsg = isJsonString(msg);      
-            if ( objMsg ) {
-                var message = {};
-                var all_msg = [];                
-                
-                message.payload = msg;
-                all_msg.push(message);
-                
-                var deviceType = localStorage.DEVICE_TYPE; 
-                if (deviceType == "web") {
-                    setNotificationList(all_msg);
-                }                
-                getNewNotifications();
 
-                
-            }
-                
-        }
-    });
-            
-    $hub.start();
-}
 
 // Initialize your app
 var App = new Framework7({
@@ -2443,13 +2398,8 @@ function clearUserInfo(){
     var pushList = getNotificationList();
     
     localStorage.clear(); 
-    if ($hub) {
-        $hub.stop();  
-    }  
-    if(window.plus) {
-        plus.push.clear();
-    }
-
+    
+  
     if (updateAssetsPosInfoTimer) {
         clearInterval(updateAssetsPosInfoTimer);
     }
@@ -2564,7 +2514,7 @@ function login(){
                
                 //init_AssetList(); 
                 //initSearchbar();
-                webSockConnect();  
+                  
                 getNewNotifications();
                 
                 App.closeModal();                
@@ -4520,9 +4470,7 @@ function getNewNotifications(params){
                 if (params && params.ptr === true) {
                     App.pullToRefreshDone();
                 }
-                /*if(window.plus) {
-                    plus.push.clear();
-                }*/
+             
                 
                 console.log(result);                       
                 if (result.MajorCode == '000') {
