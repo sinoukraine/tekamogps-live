@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.sinopacific.tekamogpslive" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="15" ios-CFBundleVersion="15">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.sinopacific.tekamogpslive" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="20" ios-CFBundleVersion="20">
     <name>TekamoGPS Live</name>
     <description>
         TekamoGPS Live tracker
