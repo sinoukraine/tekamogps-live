@@ -4,8 +4,8 @@
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#ffffff;}
-	.st1{fill:#333333;}
-	.st2{fill:none;stroke:#333333;stroke-width:0.2;stroke-miterlimit:10;}
+	.st1{fill:#1A1A1A;}
+	.st2{fill:none;stroke:#1A1A1A;stroke-width:0.2;stroke-miterlimit:10;}
 </style>
 <g>
 	<circle class="st0" cx="12" cy="12" r="12"/>
