@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.sinopacific.tekamogpslive" version="1.1.1" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="20" ios-CFBundleVersion="20">
+<widget 
+	 id="com.sinopacific.tekamogpslive" 
+  version="1.1.2"   
+  android-versionCode="22" 
+  ios-CFBundleVersion="22"
+  xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" defaultlocale="en-US">
     <name>TekamoGPS Live</name>
     <description>
         TekamoGPS Live tracker
@@ -8,7 +13,7 @@
         Sinopacific Co Limited
     </author>
     <content src="index.html" />
-    <access origin="*" />
+    <access origin="*"  allows-arbitrary-loads-for-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true' />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -22,37 +27,50 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+     <platform name="android">
+      <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+          <application android:usesCleartextTraffic="true" />
+      </edit-config>
+    </platform>
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="Orientation" value="portrait" />
-    <preference name="android-minSdkVersion" value="18" />
+        <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="Orientation" value="default" />
+    <preference name="android-minSdkVersion" value="21" />
     <!-- <preference name="android-maxSdkVersion" value="27" /> -->
-    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-targetSdkVersion" value="28" />
+     <preference name="multiDexEnabled" value="true" />
     <preference name="deployment-target" value="10.2" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <!-- <preference name="StatusBarBackgroundColor" value="#333" /> -->
     <preference name="StatusBarStyle" value="blacktranslucent" />
-    <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="2.1.3" />
     
-    <plugin name="phonegap-plugin-push" source="npm" spec="2.1.2">
+    <plugin name="phonegap-plugin-push" source="npm" spec="2.3.0">
         <variable name="SENDER_ID" value="106187216531" />
     </plugin>
     <platform name="android">
-      <resource-file src="google-services.json" target="google-services.json" />
+      <resource-file src="google-services.json" target="app/google-services.json" />
     </platform>
     <platform name="ios">
       <resource-file src="GoogleService-Info.plist" />
     </platform>
     
     <!-- <plugin name="cordova-plugin-console" source="npm" spec="1.0.7" /> -->
-    <plugin name="cordova-plugin-device" source="npm" spec="2.0.2" />
-    <plugin name="cordova-plugin-buildinfo" source="npm" spec="2.0.2" />    
+    <plugin name="cordova-plugin-device" source="npm" spec="2.0.3" />
+    <plugin name="cordova-plugin-buildinfo" source="npm" spec="4.0.0" />    
     <plugin name="cordova-plugin-dialogs" source="npm" spec="1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.1" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2" />
     <plugin name="cordova-plugin-camera" source="npm" spec="4.0.3"  />
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
 
+    <plugin name="uk.co.workingedge.phonegap.plugin.istablet" source="npm" spec="1.2.0"  />
+    <plugin name="cordova-plugin-screen-orientation" source="npm" spec="3.0.2"  />
+    <!-- <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" spec="5.0.4">
+        <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="" />
+    </plugin>
+     -->
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
         <string>You can take a photo of your asset using camera and upload it into the app</string>
     </edit-config>
