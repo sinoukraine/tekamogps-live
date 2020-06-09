@@ -63,14 +63,15 @@
     <plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.1" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2" />
     <plugin name="cordova-plugin-camera" source="npm" spec="4.0.3"  />
+    <plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0"  />
+    <plugin name="cordova-plugin-safariviewcontroller" source="npm" spec="1.6.0"/>
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
 
     <plugin name="uk.co.workingedge.phonegap.plugin.istablet" source="npm" spec="1.2.0"  />
     <plugin name="cordova-plugin-screen-orientation" source="npm" spec="3.0.2"  />
-    <!-- <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" spec="5.0.4">
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" source="npm" spec="5.0.4">
         <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="" />
     </plugin>
-     -->
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
         <string>You can take a photo of your asset using camera and upload it into the app</string>
     </edit-config>
