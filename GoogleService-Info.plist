@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>106187216531-i28545b2bq5u4586me2q3v4s6s7o8co5.apps.googleusercontent.com</string>
+	<string>106187216531-mcqv38ueqdubpvk4un1mopgdluk0k5p2.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.106187216531-i28545b2bq5u4586me2q3v4s6s7o8co5</string>
+	<string>com.googleusercontent.apps.106187216531-mcqv38ueqdubpvk4un1mopgdluk0k5p2</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBDxtHG5bNZkgGnCTdXHiwhEnu6X53VM90</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sinopacific.tekamogpsprotect</string>
+	<string>com.sinopacific.tekamogpslive</string>
 	<key>PROJECT_ID</key>
 	<string>gps-installer</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:106187216531:ios:84b04fa26074540e</string>
+	<string>1:106187216531:ios:d2e43cde0dd0b1cb</string>
 	<key>DATABASE_URL</key>
 	<string>https://gps-installer.firebaseio.com</string>
 </dict>
